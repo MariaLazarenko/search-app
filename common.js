@@ -15,7 +15,7 @@ $("#search-form").submit(() => {
         searchQueryInput.addClass("is-invalid");
     } else {
         $("#error").text("");
-        window.open("https://" + searchEngine + searchAlgorithm + searchQuery);
+        window.open("https://" + searchEngine + searchAlgorithm + encodeURIComponent(searchQuery));
     } 
 });
 
